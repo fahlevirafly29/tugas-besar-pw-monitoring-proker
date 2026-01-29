@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Pastikan baris ini tertulis lengkap dan diakhiri titik koma (;)
+// Menghubungkan URL /proker ke ProkerController
 Route::resource('proker', ProkerController::class);
