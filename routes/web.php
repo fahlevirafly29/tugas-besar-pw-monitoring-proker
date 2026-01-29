@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Baris ini yang paling penting agar /proker bisa diakses
+// Pastikan baris ini tertulis lengkap dan diakhiri titik koma (;)
 Route::resource('proker', ProkerController::class);
