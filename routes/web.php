@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Tambahkan ini untuk akses halaman proker
+// Baris ini yang paling penting agar /proker bisa diakses
 Route::resource('proker', ProkerController::class);
