@@ -2,54 +2,64 @@
 
 :root {
     --primary: #8b0000;
-    --dark: #0f172a;
-    --slate: #64748b;
-    --bg: #fdfdfd;
-    --white: #ffffff;
-    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.04), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    --primary-soft: #fff1f1;
+    --dark: #1a1a1a;
+    --slate: #475569;
+    /* Background gradasi merah ke putih */
+    --bg-main: linear-gradient(160deg, #ffe5e5 0%, #f8fafc 100%);
+    --card-bg: #fffcfc; /* Warna kartu krem kemerahan tipis */
+    --shadow: 0 12px 24px -6px rgba(139, 0, 0, 0.15);
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--bg);
+    background: var(--bg-main);
+    background-attachment: fixed;
     color: var(--dark);
-    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 40px 0;
+}
+
+.header-logo {
+    display: block;
+    margin: 0 auto 25px auto;
+    max-width: 160px;
+    filter: drop-shadow(0 10px 20px rgba(139, 0, 0, 0.2));
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 800;
     text-align: center;
     color: var(--primary);
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     letter-spacing: -1px;
 }
 
 .btn-add {
     background: var(--primary);
-    color: var(--white) !important;
-    padding: 14px 28px;
-    border-radius: 14px;
+    color: #fff !important;
+    padding: 14px 30px;
+    border-radius: 16px;
     font-weight: 700;
     text-decoration: none;
     float: right;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 15px -3px rgba(139, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(139, 0, 0, 0.3);
+    transition: 0.3s ease;
 }
 
 .btn-add:hover {
-    transform: translateY(-3px) scale(1.02);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(139, 0, 0, 0.4);
     background: #000;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
 }
 
 .proker-grid {
@@ -61,52 +71,67 @@ h1 {
 }
 
 .card {
-    background: var(--white);
-    border-radius: 24px;
+    background: var(--card-bg);
+    border-radius: 30px;
     padding: 35px;
-    border: 1px solid rgba(0,0,0,0.03);
-    box-shadow: var(--card-shadow);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Border merah tipis sebagai aksen */
+    border: 1.5px solid rgba(139, 0, 0, 0.1);
+    box-shadow: var(--shadow);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 30px 50px -12px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: var(--slate);
-    line-height: 1.6;
-    margin-bottom: 25px;
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(139, 0, 0, 0.2);
 }
 
 .status-badge {
     padding: 8px 16px;
-    background: #fff5f5;
+    background: #ffebeb;
     color: var(--primary);
     border-radius: 12px;
     font-size: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
-input, textarea {
-    border: 2px solid #f1f5f9;
-    border-radius: 16px;
-    padding: 16px;
-    background: #f8fafc;
-    transition: all 0.3s ease;
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: var(--dark);
 }
 
-input:focus {
-    border-color: var(--primary);
-    background: white;
-    outline: none;
-    box-shadow: 0 0 0 5px rgba(139, 0, 0, 0.1);
+.card p {
+    color: var(--slate);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.divisi-tag {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--slate);
+}
+
+.divisi-tag span {
+    color: var(--primary);
+}
+
+/* Link aksi di bawah kartu */
+.card-actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+.card-actions a, .card-actions button {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--primary);
 }
