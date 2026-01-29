@@ -2,63 +2,62 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Proker;
 use Illuminate\Http\Request;
 
 class ProkerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
+    public function index() {
+        $prokers = Proker::all(); 
+        return view('prokers.index', compact('prokers')); 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+    public function create() {
+        return view('prokers.create'); 
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request) {
+        $request->validate([
+            'nama_proker' => 'required|string|min:5|unique:prokers,nama_proker',
+            'divisi'      => 'required',
+            'deskripsi'   => 'required|min:10',
+        ]); 
+
+        $proker = new Proker(); 
+        $proker->nama_proker = $request->nama_proker; 
+        $proker->divisi      = $request->divisi;
+        $proker->deskripsi   = $request->deskripsi;
+        $proker->status      = 'Belum';
+        $proker->save();
+
+        return redirect()->route('proker.index')->with('success', 'Proker berhasil disimpan!'); 
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+    public function edit($id) {
+        $proker = Proker::find($id); 
+        return view('prokers.edit', compact('proker')); 
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
+    public function update(Request $request, $id) {
+        $request->validate([
+            'nama_proker' => 'required|string|min:5',
+            'divisi'      => 'required',
+            'deskripsi'   => 'required|min:10',
+        ]);
+
+        $proker = Proker::find($id); 
+        $proker->nama_proker = $request->nama_proker;
+        $proker->divisi      = $request->divisi;
+        $proker->deskripsi   = $request->deskripsi;
+        $proker->status      = $request->status;
+        $proker->save(); 
+
+        return redirect('/proker')->with('success', 'Data diperbarui!'); 
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+    public function destroy($id) {
+        $proker = Proker::find($id); 
+        $proker->delete(); 
+        return redirect('/proker')->with('success', 'Data dihapus!'); 
     }
 }
