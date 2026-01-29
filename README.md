@@ -21,9 +21,9 @@ Aplikasi ini dibangun menggunakan tumpukan teknologi berikut:
 Proyek ini dikerjakan secara kolaboratif oleh kelompok yang terdiri dari 3 mahasiswa:
 
 ## Daftar Anggota
-| * Rafly Fahlevi Herdiana| 2307018 |
-| * Rafi Miftahul Fauzi| 2307024 | 
-| * Reyhan Muhammad Fathir| 2307001 | 
+| Rafly Fahlevi Herdiana| 2307018 |
+| Rafi Miftahul Fauzi| 2307024 | 
+| Reyhan Muhammad Fathir| 2307001 | 
 
 ---
 *Proyek ini merupakan implementasi materi perkuliahan dalam bentuk aplikasi nyata untuk memenuhi Tugas Besar Praktikum Pemrograman Dasar Web.*
