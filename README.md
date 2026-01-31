@@ -2,9 +2,8 @@
 
 Aplikasi berbasis web ini dirancang untuk mempermudah manajemen serta pengawasan program kerja di lingkungan **Himpunan Mahasiswa Sistem Informasi Institut Teknologi Garut**.
 
----
 
-## 🚀 Fitur Utama
+## Fitur Utama
 Aplikasi ini sudah dilengkapi dengan fitur-fitur esensial untuk manajemen proyek:
 * **Dashboard Monitoring**: Tampilan modern berbasis kartu (*card*) untuk melihat seluruh daftar proker secara ringkas.
 * **Sistem CRUD Lengkap**: Kemampuan untuk Menambah, Melihat, Mengubah, dan Menghapus data program kerja.
@@ -12,7 +11,6 @@ Aplikasi ini sudah dilengkapi dengan fitur-fitur esensial untuk manajemen proyek
 * **Manajemen Status**: Pelacakan progres kegiatan dengan status 'Belum', 'Sedang', dan 'Selesai'.
 * **Validasi Data**: Keamanan input data untuk memastikan setiap informasi yang masuk sesuai dengan kriteria.
 
----
 
 ##  Dokumentasi Sistem
 
@@ -32,14 +30,12 @@ Formulir input untuk mendaftarkan kegiatan baru ke dalam sistem database.
 Halaman untuk memperbarui detail informasi atau mengubah status progres kegiatan.
 ![Edit Proker](ss-edit-proker.png)
 
----
 
-##  Teknologi Utama
+##  Teknologi 
 * **Framework:** Laravel 10/11
 * **Database:** MySQL
 * **Version Control:** GitHub
 
----
 
 ##  Daftar Anggota Kelompok
 | Nama | NIM | 
