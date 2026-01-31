@@ -1,29 +1,49 @@
 # SI-PROKER HIMA (Sistem Monitoring Program Kerja)
 
-Aplikasi berbasis web ini dirancang untuk mempermudah manajemen serta pengawasan program kerja di lingkungan Himpunan Mahasiswa Sistem Informasi Institut Teknologi Garut.
-
-## Deskripsi & Tujuan
-Sistem ini berfungsi sebagai media dokumentasi rencana, progres, hingga hasil akhir setiap program kerja secara transparan dan terstruktur.
-
-**Tujuan Proyek:**
-* Membangun aplikasi web yang fungsional serta responsif.
-* Memantau setiap tahapan kegiatan divisi secara real-time.
-* Mengimplementasikan fitur CRUD (Create, Read, Update, Delete) untuk pengelolaan data proker.
-* Menerapkan materi perkuliahan Laravel dalam proyek nyata.
-
-## Teknologi Utama
-Aplikasi ini dibangun menggunakan tumpukan teknologi berikut:
-*  Framework: Laravel (Opsi 2 - Fullstack CRUD)
-*  Database: MySQL
-*  Version Control: GitHub
-
-## Informasi Kelompok
-Proyek ini dikerjakan secara kolaboratif oleh kelompok yang terdiri dari 3 mahasiswa:
-
-## Daftar Anggota
-| Rafly Fahlevi Herdiana| 2307018 |
-| Rafi Miftahul Fauzi| 2307024 | 
-| Reyhan Muhammad Fathir| 2307001 | 
+Aplikasi berbasis web ini dirancang untuk mempermudah manajemen serta pengawasan program kerja di lingkungan **Himpunan Mahasiswa Sistem Informasi Institut Teknologi Garut**.
 
 ---
-*Proyek ini merupakan implementasi materi perkuliahan dalam bentuk aplikasi nyata untuk memenuhi Tugas Besar Praktikum Pemrograman Dasar Web.*
+
+## 🚀 Fitur Utama
+Aplikasi ini sudah dilengkapi dengan fitur-fitur esensial untuk manajemen proyek:
+* **Dashboard Monitoring**: Tampilan modern berbasis kartu (*card*) untuk melihat seluruh daftar proker secara ringkas.
+* **Sistem CRUD Lengkap**: Kemampuan untuk Menambah, Melihat, Mengubah, dan Menghapus data program kerja.
+* **Fitur Pencarian Dinamis**: Memudahkan pencarian proker berdasarkan nama kegiatan atau divisi secara *real-time*.
+* **Manajemen Status**: Pelacakan progres kegiatan dengan status 'Belum', 'Sedang', dan 'Selesai'.
+* **Validasi Data**: Keamanan input data untuk memastikan setiap informasi yang masuk sesuai dengan kriteria.
+
+---
+
+##  Dokumentasi Sistem
+
+### 1. Halaman Utama (Dashboard)
+Menampilkan seluruh program kerja dalam bentuk grid kartu yang rapi dan modern.
+![Dashboard Monitoring](ss-dashboard.png)
+
+### 2. Fitur Pencarian (Search)
+Memungkinkan pengguna memfilter data secara cepat berdasarkan judul proker atau divisi.
+![Fitur Search](ss-search.png)
+
+### 3. Tambah Program Kerja
+Formulir input untuk mendaftarkan kegiatan baru ke dalam sistem database.
+![Tambah Proker](ss-tambah-proker.png)
+
+### 4. Edit Program Kerja
+Halaman untuk memperbarui detail informasi atau mengubah status progres kegiatan.
+![Edit Proker](ss-edit-proker.png)
+
+---
+
+##  Teknologi Utama
+* **Framework:** Laravel 10/11
+* **Database:** MySQL
+* **Version Control:** GitHub
+
+---
+
+##  Daftar Anggota Kelompok
+| Nama | NIM | 
+| :--- | :--- | 
+| **Rafly Fahlevi Herdiana** | 2307018 | 
+| **Rafi Miftahul Fauzi** | 2307024 | 
+| **Reyhan Muhammad Fathir** | 2307001 |

@@ -7,10 +7,17 @@ use Illuminate\Http\Request;
 
 class ProkerController extends Controller
 {
-    public function index() {
-        $prokers = Proker::all(); 
-        return view('prokers.index', compact('prokers')); 
-    }
+    public function index(Request $request)
+    {
+    $search = $request->get('search');
+
+    $prokers = Proker::when($search, function($query) use ($search) {
+        return $query->where('nama_proker', 'like', "%{$search}%")
+                     ->orWhere('divisi', 'like', "%{$search}%");
+    })->get();
+
+    return view('prokers.index', compact('prokers'));
+}
 
     public function create() {
         return view('prokers.create'); 
